@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>LeetCode刷题记录</title>
+      <link href="/2024/05/14/LeetCode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+      <url>/2024/05/14/LeetCode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<div class="note todo purple flat"><p>每天固定两道LeetCode，先从easy难度开始，刚入手用的还是python，C语言指针结构那里还不是很熟练，感觉之前没有学好，在算法方面要多下点功夫，水滴石穿，量变将会引起质变</p></div><div class="note paperclip green flat"><p>这里将会记载一些刷力扣过程中对一些题的想法和笔记</p></div><h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><blockquote><p>第一题求两数之和用时间复杂度O(n^2)的双重循环很简单，但问题是如何将时间复杂度进一步降低？</p></blockquote><p>于是我大概查了一下，用<code>哈希表</code>存储已经遍历过的元素的索引，以便快速查找目标值的补数：</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">two_sum</span>(<span class="params">self, nums, target</span>):</span><br><span class="line">    num_to_index = &#123;&#125;                         <span class="comment"># 创建一个哈希表</span></span><br><span class="line">    <span class="keyword">for</span> i, num <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):</span><br><span class="line">        complement = target - num     <span class="comment"># 差值</span></span><br><span class="line">        <span class="keyword">if</span> complement <span class="keyword">in</span> num_to_index:</span><br><span class="line">            <span class="keyword">return</span> [num_to_index[complement], i]</span><br><span class="line">        num_to_index[num] = i</span><br><span class="line">    <span class="keyword">return</span> []</span><br></pre></td></tr></table></figure><h2 id="enumerate函数"><a href="#enumerate函数" class="headerlink" title="enumerate函数"></a>enumerate函数</h2><p>enumerate意思为：<code>枚举</code></p><p>在Python中，<code>enumerate</code> 函数用于将一个可迭代对象的元素与其索引组合成一个个<strong>元组</strong>，然后返回这些元组组成的迭代器。当在循环中使用 <code>enumerate</code> 时，可以同时获取到元素的<strong>索引</strong>和<strong>值</strong>。</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i, num <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):</span><br><span class="line"><span class="comment"># i 为元素索引，num为元素值，nums为一列表</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>工程化学</title>
       <link href="/2024/04/24/%E5%B7%A5%E7%A8%8B%E5%8C%96%E5%AD%A6/"/>
       <url>/2024/04/24/%E5%B7%A5%E7%A8%8B%E5%8C%96%E5%AD%A6/</url>
